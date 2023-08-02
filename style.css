@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+/* 
+    VARIABLES:
+*/
+:root {
+	--color-darkred: #620000;
+	--color-bgred: #7c3e3e;
+	--color-lightred: #9e8f8f;
+	--color-grey: #8c8cdf;
+	--color-overlay: rgba(197, 177, 123, 0.8);
+}
+
+/*--------------
+    RESET
+---------------*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*--------------
+    GENERAL
+---------------*/
+html {
+	font-family: 'Space Grotesk', sans-serif;
+	background-color: var(--color-bgred);
+	color: var(--color-darkred);
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+/*--------------
+    HEADER
+---------------*/
+header {
+	background-color: var(--color-grey);
+	color: var(--color-darkred);
+}
+
+.header-text {
+	max-width: 50vw;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1.5rem;
+}
+
+/*--------------
+    MAIN
+---------------*/
+main {
+	background-color: var(--color-bgred);
+	color: white;
+}
+
+.characters-container {
+	max-width: 60vw;
+	margin-inline: auto;
+	padding: 2rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: start;
+	gap: 2rem;
+}
+
+.characters {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+	cursor: pointer;
+}
+
+.character {
+	width: 10rem;
+	height: 10rem;
+	background-color: var(--color-lightred);
+	border: 2px solid var(--color-darkred);
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.image {
+	overflow: hidden;
+}
+
+.character img {
+	width: 100%;
+}
+
+
+/* LOADER */
+.loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-overlay);
+	z-index: 999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loading img {
+	width: 100px;
+}
+
+.loading-hidden {
+	display: none;
+}
+
+/* MODAL */
+.modal h2 {
+	margin-bottom: 1rem;
+}
+
+.modal p {
+	margin-bottom: 1rem;
+	font-size: 1.25rem;
+}
+
+.modal h2 {
+	margin-bottom: 1rem;
+}
+
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-overlay);
+	color: var(--color-darkred);
+	z-index: 999;
+}
+
+.modal-box {
+	position: relative;
+	background-color: #ffffff;
+	padding: 20px;
+	border: 2px solid var(--color-darkred);
+	max-width: 35rem;
+	margin: 1.5rem auto;
+}
+
+.modal-close {
+	background-color: var(--color-grey);
+	height: 36px;
+	width: 36px;
+	border-radius: 50%;
+	border: 2px solid var(--color-darkred);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+
+.modal-hidden {
+	display: none;
+}
